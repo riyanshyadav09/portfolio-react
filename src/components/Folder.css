@@ -1,0 +1,99 @@
+.folder {
+  --folder-color: #5227FF;
+  --folder-back-color: #4a1fe6;
+  --paper-1: #e6e6e6;
+  --paper-2: #f2f2f2;
+  --paper-3: #ffffff;
+  
+  position: relative;
+  width: 120px;
+  height: 90px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.folder:hover {
+  transform: translateY(-5px);
+}
+
+.folder__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--folder-back-color);
+  border-radius: 8px 8px 4px 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.folder__front {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 40px;
+  height: 12px;
+  background: var(--folder-color);
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.folder__front.right {
+  left: 40px;
+  width: 80px;
+  background: var(--folder-color);
+  filter: brightness(1.1);
+}
+
+.paper {
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  border-radius: 3px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 600;
+  color: #333;
+}
+
+.paper-1 {
+  background: var(--paper-1);
+  top: 15px;
+  left: 20px;
+  z-index: 1;
+}
+
+.paper-2 {
+  background: var(--paper-2);
+  top: 18px;
+  left: 22px;
+  z-index: 2;
+}
+
+.paper-3 {
+  background: var(--paper-3);
+  top: 21px;
+  left: 24px;
+  z-index: 3;
+}
+
+.folder.open .paper-1 {
+  transform: translate(calc(-30px + var(--magnet-x, 0px)), calc(-20px + var(--magnet-y, 0px))) rotate(-15deg);
+}
+
+.folder.open .paper-2 {
+  transform: translate(calc(0px + var(--magnet-x, 0px)), calc(-25px + var(--magnet-y, 0px))) rotate(5deg);
+}
+
+.folder.open .paper-3 {
+  transform: translate(calc(25px + var(--magnet-x, 0px)), calc(-15px + var(--magnet-y, 0px))) rotate(10deg);
+}
+
+.folder.open .paper:hover {
+  transform: translate(var(--magnet-x, 0px), var(--magnet-y, 0px)) rotate(0deg) scale(1.1);
+  z-index: 10;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}

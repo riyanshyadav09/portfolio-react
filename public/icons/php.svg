@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="phpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8993be;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6f7bf7;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#phpGrad)"/>
+  <ellipse cx="32" cy="32" rx="24" ry="12" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  <text x="32" y="38" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="rgba(255,255,255,0.9)">PHP</text>
+  <circle cx="18" cy="24" r="3" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="46" cy="24" r="3" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="18" cy="40" r="3" fill="rgba(255,255,255,0.7)"/>
+  <circle cx="46" cy="40" r="3" fill="rgba(255,255,255,0.7)"/>
+</svg>

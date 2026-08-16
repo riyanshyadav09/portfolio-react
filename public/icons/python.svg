@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pythonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3776ab;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffd43b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#306998;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#pythonGrad)"/>
+  <path d="M32 12c-8 0-12 4-12 12v4h12v2H16c-4 0-8 4-8 8s4 8 8 8h4v-6c0-4 4-8 8-8h12c4 0 8-4 8-8V20c0-8-4-12-12-12z" fill="rgba(255,255,255,0.9)"/>
+  <circle cx="26" cy="20" r="2" fill="#306998"/>
+  <path d="M32 52c8 0 12-4 12-12v-4H32v-2h16c4 0 8-4 8-8s-4-8-8-8h-4v6c0 4-4 8-8 8H24c-4 0-8 4-8 8v12c0 8 4 12 12 12z" fill="rgba(255,212,59,0.9)"/>
+  <circle cx="38" cy="44" r="2" fill="#ffd43b"/>
+</svg>
