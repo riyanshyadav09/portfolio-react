@@ -341,56 +341,156 @@ function App() {
             </p>
             
             <div className="hero-action-buttons">
-              <a 
-                href="https://www.linkedin.com/in/rampravesh-yadav-89a142331/" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="hero-cta-btn cta-linkedin-pulse"
+              <StarBorder
+                as="a"
+                href="https://www.linkedin.com/in/rampravesh-yadav-89a142331/"
+                target="_blank"
+                rel="noreferrer"
+                color="#38bdf8"
+                trailColor="#0284c7"
+                duration={3.5}
+                direction="clockwise"
+                stars={2}
+                trailLength={0.35}
+                thickness={1.5}
+                radius={14}
+                glow={0.8}
+                hover="lap"
+                sparkle={true}
+                clickPulse
+                theme="dark"
+                className="star-cta-btn star-cta-linkedin"
               >
-                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                <span>Connect & Follow on LinkedIn</span>
-              </a>
+                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                <span>Connect on LinkedIn</span>
+              </StarBorder>
 
-              <a 
-                href="https://www.upwork.com/freelancers/~0134426549a0a03429" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="hero-cta-btn cta-upwork"
+              <StarBorder
+                as="a"
+                href="https://www.upwork.com/freelancers/~0134426549a0a03429"
+                target="_blank"
+                rel="noreferrer"
+                color="#22c55e"
+                trailColor="#16a34a"
+                duration={4}
+                direction="clockwise"
+                stars={1}
+                trailLength={0.3}
+                thickness={1.2}
+                radius={14}
+                glow={0.7}
+                hover="lap"
+                clickPulse
+                theme="dark"
+                className="star-cta-btn"
               >
-                <span>Hire on Upwork</span>
-              </a>
+                <span>💼 Hire on Upwork ($20/hr)</span>
+              </StarBorder>
 
-              <a 
-                href="https://www.fiverr.com/riyansh_yadav" 
-                target="_blank" 
-                rel="noreferrer" 
-                className="hero-cta-btn cta-fiverr"
+              <StarBorder
+                as="a"
+                href="https://www.fiverr.com/riyansh_yadav"
+                target="_blank"
+                rel="noreferrer"
+                color="#10b981"
+                trailColor="#059669"
+                duration={4}
+                direction="clockwise"
+                stars={1}
+                trailLength={0.3}
+                thickness={1.2}
+                radius={14}
+                glow={0.7}
+                hover="lap"
+                clickPulse
+                theme="dark"
+                className="star-cta-btn"
               >
-                <span>Order on Fiverr</span>
-              </a>
+                <span>⚡ Order on Fiverr</span>
+              </StarBorder>
 
-              <a 
-                href="#projects" 
-                className="hero-cta-btn cta-projects"
+              <StarBorder
+                as="a"
+                href="#projects"
+                color="#a855f7"
+                trailColor="#8b5cf6"
+                duration={4.5}
+                direction="clockwise"
+                stars={1}
+                trailLength={0.25}
+                thickness={1.2}
+                radius={14}
+                glow={0.6}
+                hover="lap"
+                clickPulse
+                theme="dark"
+                className="star-cta-btn"
               >
-                <span>Explore 4 Live Projects ↓</span>
-              </a>
+                <span>Explore 4 Projects ↓</span>
+              </StarBorder>
             </div>
 
             <div className="os-badges">
-              <StarBorder color="#3b82f6" speed="6s" className="os-badge-star" as="div">
+              <StarBorder
+                as="div"
+                color="#3b82f6"
+                trailColor="#60a5fa"
+                duration={4}
+                direction="clockwise"
+                stars={1}
+                trailLength={0.3}
+                thickness={1}
+                radius={12}
+                glow={0.6}
+                hover="lap"
+                clickPulse
+                theme="dark"
+                className="os-badge-star"
+              >
                 <div className="badge-content">
                   <div className="dot blue"></div>
                   <span>Windows Dev</span>
                 </div>
               </StarBorder>
-              <StarBorder color="#f97316" speed="7s" className="os-badge-star" as="div">
+
+              <StarBorder
+                as="div"
+                color="#f97316"
+                trailColor="#fb923c"
+                duration={4.5}
+                direction="clockwise"
+                stars={1}
+                trailLength={0.3}
+                thickness={1}
+                radius={12}
+                glow={0.6}
+                hover="lap"
+                clickPulse
+                theme="dark"
+                className="os-badge-star"
+              >
                 <div className="badge-content">
                   <div className="dot orange"></div>
                   <span>Ubuntu Server</span>
                 </div>
               </StarBorder>
-              <StarBorder color="#ef4444" speed="5s" className="os-badge-star" as="div">
+
+              <StarBorder
+                as="div"
+                color="#ef4444"
+                trailColor="#f87171"
+                duration={3.8}
+                direction="clockwise"
+                stars={1}
+                trailLength={0.3}
+                thickness={1}
+                radius={12}
+                glow={0.6}
+                hover="lap"
+                clickPulse
+                theme="dark"
+                className="os-badge-star"
+              >
                 <div className="badge-content">
                   <div className="dot red"></div>
                   <span>Kali Linux Security</span>
@@ -680,9 +780,20 @@ function App() {
 
           <div className="resume-download-bar">
             <span className="resume-label">Need an official CV for hiring or compliance?</span>
-            <button 
-              type="button" 
-              className="resume-download-btn"
+            <StarBorder
+              as="button"
+              color="#818cf8"
+              trailColor="#6366f1"
+              duration={3.5}
+              direction="clockwise"
+              stars={2}
+              trailLength={0.3}
+              thickness={1.5}
+              radius={12}
+              glow={0.8}
+              sparkle={true}
+              clickPulse
+              theme="dark"
               onClick={() => {
                 const link = document.createElement('a');
                 link.href = '/Rampravesh-Full-Stack-Software-Engineer.pdf';
@@ -691,7 +802,7 @@ function App() {
               }}
             >
               📄 Download Verified ATS Resume (PDF)
-            </button>
+            </StarBorder>
           </div>
         </div>
       </section>

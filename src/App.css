@@ -977,3 +977,15 @@ body {
   margin: 12px auto 0 auto;
   line-height: 1.6;
 }
+\n\n
+/* Official ReactBits StarBorder CTA Styles */
+.star-cta-btn {
+  text-decoration: none !important;
+  font-size: 0.92rem !important;
+  font-weight: 700 !important;
+  padding: 10px 20px !important;
+}
+
+.star-cta-linkedin {
+  font-weight: 800 !important;
+}
