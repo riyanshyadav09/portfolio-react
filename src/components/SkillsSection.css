@@ -3,6 +3,105 @@
   margin-top: 24px;
 }
 
+/* ==========================================================================
+   TRANSPARENT BRAND ICONS STRIP
+   ========================================================================== */
+.tech-strip-container {
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 20px 24px;
+  margin-bottom: 35px;
+}
+
+.tech-strip-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.strip-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.strip-text {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.tech-icons-scroller {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+}
+
+.tech-badge-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 12px 14px;
+  min-width: 90px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  flex-shrink: 0;
+}
+
+.tech-badge-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #38bdf8;
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+}
+
+.tech-badge-icon-box {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6px;
+}
+
+.tech-svg-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+  transition: transform 0.2s ease;
+}
+
+.tech-badge-card:hover .tech-svg-img {
+  transform: scale(1.15);
+}
+
+.tech-badge-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   CATEGORY FILTER TABS
+   ========================================================================== */
 .skills-filter-tabs {
   display: flex;
   justify-content: center;
@@ -40,6 +139,9 @@
   box-shadow: 0 4px 20px rgba(37, 99, 235, 0.45);
 }
 
+/* ==========================================================================
+   SKILLS CARDS GRID & TRANSPARENT LOGOS
+   ========================================================================== */
 .skills-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -85,13 +187,26 @@
 }
 
 .skill-icon-box {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: 12px;
+  border: 1px solid;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.3rem;
+  padding: 8px;
+  transition: transform 0.25s ease;
+}
+
+.skill-card-item:hover .skill-icon-box {
+  transform: scale(1.1) rotate(4deg);
+}
+
+.skill-main-svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
 }
 
 .skill-meta-head {
@@ -149,13 +264,29 @@
 }
 
 .skill-pill-tool {
-  font-size: 0.72rem;
+  font-size: 0.74rem;
   font-weight: 600;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.09);
   color: #cbd5e1;
-  padding: 3px 8px;
+  padding: 4px 8px;
   border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+}
+
+.skill-pill-tool:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.tool-micro-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
 }
 
 .skill-applied-badge {
