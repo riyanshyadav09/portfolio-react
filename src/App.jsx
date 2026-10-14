@@ -9,6 +9,7 @@ import TerminalDark from './components/TerminalDark';
 import SkillsSection from './components/SkillsSection';
 import CertificationsSection from './components/CertificationsSection';
 import LearningPathSection from './components/LearningPathSection';
+import TeamSection from './components/TeamSection';
 import ProjectBox from './components/ProjectBox';
 import GalleryModal from './components/GalleryModal';
 import Folder from './components/Folder';
@@ -607,79 +608,7 @@ function App() {
       </section>
 
       {/* SECTION 5: TEAM COLLABORATORS */}
-      <section id="team" className="team-section">
-        <div className="container">
-          <SplitText
-            text="Leadership & Technical Collaborators"
-            className="section-title"
-            tag="h2"
-            delay={50}
-            duration={0.6}
-            ease="ease-out"
-            splitType="chars"
-            from={{ opacity: 0, y: 30 }}
-            to={{ opacity: 1, y: 0 }}
-            textAlign="center"
-          />
-          <div className="team-grid">
-            {[
-              {
-                name: "Ram Pravesh Yadav",
-                role: "Lead Full Stack & Security Engineer",
-                image: "/Rampravesh.jpeg",
-                description: "Overseeing end-to-end architecture, secure API development, VAPT drills, and MERN deployment."
-              },
-              {
-                name: "Tushar",
-                role: "Frontend & UI/UX Specialist",
-                image: "/Tushar.jpeg",
-                description: "Crafting modern, accessible, and reactive user interfaces with modern CSS systems."
-              },
-              {
-                name: "Yash Gupta",
-                role: "Systems & Cloud Administrator",
-                image: "/yash gupta.jpeg",
-                description: "Managing server deployments, reverse proxies, containerization, and networking labs."
-              },
-              {
-                name: "Pradeep Yadav",
-                role: "Database & Backend Engineer",
-                image: "/Pradeep yadav.jpeg",
-                description: "Designing normalized MySQL schemas, query optimization, and REST integrations."
-              },
-              {
-                name: "Omjee Shukla",
-                role: "Quality Assurance & QA Automation",
-                image: "/Omjee sukla.jpeg",
-                description: "Executing automated testing, load benchmarks, and cross-browser reliability testing."
-              },
-              {
-                name: "Divya Prakash",
-                role: "Research & Documentation Analyst",
-                image: "/Divya prakash.jpeg",
-                description: "Compiling security documentation, compliance audit debriefs, and system manuals."
-              },
-              {
-                name: "Abhishek",
-                role: "Security & Penetration Testing Intern",
-                image: "/Abhishek.jpeg",
-                description: "Assisting in network reconnaissance, port scanning verification, and vulnerability analysis."
-              }
-            ].map((member, index) => (
-              <div key={index} className="team-card">
-                <div className="team-image-container">
-                  <img src={member.image} alt={member.name} className="team-image" />
-                </div>
-                <div className="team-info">
-                  <h3 className="team-name">{member.name}</h3>
-                  <p className="team-role">{member.role}</p>
-                  <p className="team-description">{member.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <TeamSection />
 
       {/* SECTION 6: ABOUT ME */}
       <section id="about" className="about-section">
