@@ -5,6 +5,7 @@ import TrueFocusText from './components/TrueFocusText';
 import Lightning from './components/Lightning';
 import SplitText from './components/SplitText';
 import StarBorder from './components/StarBorder';
+import TerminalDark from './components/TerminalDark';
 import SkillsSection from './components/SkillsSection';
 import CertificationsSection from './components/CertificationsSection';
 import LearningPathSection from './components/LearningPathSection';
@@ -20,6 +21,7 @@ function App() {
 
   const navItems = [
     { label: "Home", href: "#home" },
+    { label: "Terminal", href: "#terminal" },
     { label: "Skills", href: "#skills" },
     { label: "Certifications", href: "#certifications" },
     { label: "Roadmap", href: "#roadmap" },
@@ -498,6 +500,23 @@ function App() {
               </StarBorder>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* SECTION: LIVE INTERACTIVE SECURITY CONSOLE (REACTBITS TERMINAL DARK) */}
+      <section id="terminal" className="content-section terminal-section">
+        <div className="container">
+          <div className="section-head-center">
+            <TrueFocusText 
+              sentence="Live Interactive Security & Engineering Console"
+              glowColor="#34d399"
+            />
+            <p className="section-subtitle-text">
+              Real-time terminal execution demonstrating raw Python socket scanning, SMTP protocol security auditing, production MERN clustering, and IoT mesh telemetry.
+            </p>
+          </div>
+
+          <TerminalDark />
         </div>
       </section>
 
