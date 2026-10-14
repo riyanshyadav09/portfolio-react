@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import ProfileCard from './components/ProfileCard';
 import GlitchText from './components/GlitchText';
+import TrueFocusText from './components/TrueFocusText';
 import Lightning from './components/Lightning';
 import SplitText from './components/SplitText';
 import StarBorder from './components/StarBorder';
+import SkillsSection from './components/SkillsSection';
+import CertificationsSection from './components/CertificationsSection';
+import LearningPathSection from './components/LearningPathSection';
 import ProjectBox from './components/ProjectBox';
 import GalleryModal from './components/GalleryModal';
 import Folder from './components/Folder';
@@ -16,6 +20,9 @@ function App() {
 
   const navItems = [
     { label: "Home", href: "#home" },
+    { label: "Skills", href: "#skills" },
+    { label: "Certifications", href: "#certifications" },
+    { label: "Roadmap", href: "#roadmap" },
     { label: "Projects", href: "#projects" },
     { label: "Team", href: "#team" },
     { label: "About", href: "#about" },
@@ -394,7 +401,58 @@ function App() {
         </div>
       </section>
 
-      {/* Featured Production Projects Section */}
+      {/* SECTION 1: TECHNICAL SKILLS MATRIX */}
+      <section id="skills" className="content-section">
+        <div className="container">
+          <div className="section-head-center">
+            <TrueFocusText 
+              sentence="Interactive Technical Skills & Production Arsenal"
+              glowColor="#3b82f6"
+            />
+            <p className="section-subtitle-text">
+              Categorized proficiency matrix validated across production builds, penetration testing drills, and cloud deployments.
+            </p>
+          </div>
+
+          <SkillsSection />
+        </div>
+      </section>
+
+      {/* SECTION 2: VERIFIED CERTIFICATIONS & ACADEMIC CREDENTIALS */}
+      <section id="certifications" className="content-section">
+        <div className="container">
+          <div className="section-head-center">
+            <TrueFocusText 
+              sentence="Official Certifications & Academic Credentials"
+              glowColor="#0ea5e9"
+            />
+            <p className="section-subtitle-text">
+              Verified certifications from Infosys Maker Lab (CAS AKTU), Google Cybersecurity, TryHackMe, and B.Tech IT Degree.
+            </p>
+          </div>
+
+          <CertificationsSection />
+        </div>
+      </section>
+
+      {/* SECTION 3: LEARNING PATH & CAREER ROADMAP */}
+      <section id="roadmap" className="content-section">
+        <div className="container">
+          <div className="section-head-center">
+            <TrueFocusText 
+              sentence="Structured Learning Path & Technical Roadmap"
+              glowColor="#10b981"
+            />
+            <p className="section-subtitle-text">
+              From Computer Science fundamentals to Full-Stack MERN engineering, offline Infosys residency, and Certified Ethical Hacker (CEH) preparation.
+            </p>
+          </div>
+
+          <LearningPathSection />
+        </div>
+      </section>
+
+      {/* SECTION 4: FEATURED PRODUCTION PROJECTS */}
       <section id="projects" className="projects-section">
         <div className="container">
           <div className="projects-header">
@@ -405,11 +463,9 @@ function App() {
               className="projects-folder"
             />
             <div className="projects-title-container">
-              <SplitText
-                text="Featured Production & Security Projects"
-                className="section-title"
-                tag="h2"
-                textAlign="center"
+              <TrueFocusText 
+                sentence="Featured Production & Security Projects"
+                glowColor="#8b5cf6"
               />
               <p className="projects-subtitle">
                 Each project includes <strong>5 High-Resolution Screenshots</strong>, 
@@ -431,7 +487,7 @@ function App() {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* SECTION 5: TEAM COLLABORATORS */}
       <section id="team" className="team-section">
         <div className="container">
           <SplitText
@@ -506,7 +562,7 @@ function App() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* SECTION 6: ABOUT ME */}
       <section id="about" className="about-section">
         <div className="container">
           <SplitText
@@ -543,7 +599,7 @@ function App() {
         </div>
       </section>
 
-      {/* Contact & Hire Section */}
+      {/* SECTION 7: CONTACT & HIRE ME */}
       <section id="contact" className="contact-section">
         <div className="container">
           <h2 className="section-title">Ready to Collaborate or Hire?</h2>
