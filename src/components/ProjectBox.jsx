@@ -1,43 +1,79 @@
 import React from 'react';
 import './ProjectBox.css';
 
-const ProjectBox = ({ title, items, image, index }) => {
-  const colors = [
-    '#3b82f6', '#8b5cf6', '#ec4899', '#ef4444', '#f97316',
-    '#eab308', '#22c55e', '#14b8a6', '#06b6d4', '#6366f1', '#d946ef'
-  ];
-
-  const borderColor = colors[index % colors.length];
+const ProjectBox = ({ project, onOpenGallery }) => {
+  const {
+    title,
+    category,
+    coverImage,
+    description,
+    tags = [],
+    highlights = [],
+    borderColor = '#3b82f6',
+    liveUrl,
+    githubUrl,
+    gallery = []
+  } = project;
 
   return (
-    <div className="project-box" style={{'--border-color': borderColor}}>
-      <div className="project-box-inner">
-        <div className="project-image-container">
-          <img 
-            src={image} 
-            alt={title}
-            className="project-image"
-            onError={(e) => {
-              e.target.style.display = 'none';
-              e.target.nextSibling.style.display = 'flex';
-            }}
-          />
-          <div className="project-icon" style={{background: `linear-gradient(135deg, ${borderColor}, ${borderColor}aa)`, display: 'none'}}>
-            <svg width="32" height="32" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M11,16.5L6.5,12L7.91,10.59L11,13.67L16.59,8.09L18,9.5L11,16.5Z"/>
-            </svg>
+    <div className="project-card-premium" style={{ '--card-border': borderColor }}>
+      <div className="project-card-header-img" onClick={() => onOpenGallery(project)}>
+        <img src={coverImage} alt={title} className="card-cover-image" />
+        <div className="card-category-badge" style={{ backgroundColor: borderColor }}>
+          {category}
+        </div>
+        <div className="card-hover-overlay">
+          <div className="card-overlay-btn">
+            🔍 View 5 HD Screens & Architecture
           </div>
         </div>
-        <div className="project-box-content">
-          <h3 className="project-title">{title}</h3>
-          <ul className="project-list">
-            {items.map((item, itemIndex) => (
-              <li key={itemIndex} className="project-item">
-                <span className="project-bullet" style={{background: borderColor}}></span>
-                <span className="project-text">{item}</span>
-              </li>
-            ))}
-          </ul>
+      </div>
+
+      <div className="project-card-body">
+        <h3 className="project-card-title">{title}</h3>
+        <p className="project-card-desc">{description}</p>
+
+        <div className="project-card-highlights">
+          {highlights.map((h, i) => (
+            <div key={i} className="highlight-pill">
+              <span className="highlight-dot" style={{ backgroundColor: borderColor }}></span>
+              <span>{h}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="project-card-tags">
+          {tags.map((tag, i) => (
+            <span key={i} className="tech-tag">{tag}</span>
+          ))}
+        </div>
+
+        <div className="project-card-footer">
+          <button 
+            type="button" 
+            className="btn-gallery-view" 
+            onClick={() => onOpenGallery(project)}
+            style={{ borderColor: borderColor, color: '#f8fafc' }}
+          >
+            📸 5 HD Screenshots
+          </button>
+
+          <div className="card-link-buttons">
+            {liveUrl && (
+              <a href={liveUrl} target="_blank" rel="noreferrer" className="btn-card-action btn-live" title="Open Live Web Application">
+                Live App ↗
+              </a>
+            )}
+            {githubUrl ? (
+              <a href={githubUrl} target="_blank" rel="noreferrer" className="btn-card-action btn-github" title="View Source on GitHub">
+                GitHub ↗
+              </a>
+            ) : (
+              <span className="btn-card-action btn-private" title="Proprietary Project (Private Code)">
+                🔒 Safe Code
+              </span>
+            )}
+          </div>
         </div>
       </div>
     </div>
