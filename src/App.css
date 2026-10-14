@@ -14,7 +14,7 @@ body {
 .portfolio-container {
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
 }
 
@@ -319,7 +319,7 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 0 auto 20px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .member-image {
